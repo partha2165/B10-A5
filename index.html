@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" data-theme="light">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <link rel="stylesheet" href="style.css">
+    <!--Google Font Link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!--Tailwind And DaisyUI CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+     <!--Tailwind Config-->
+     <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                bgPrimary: '#B4F461',                
+                textPrimary:'#111111', 
+                 textSecondary:'#111111B3',     
+                             
+              },
+              fontFamily: {
+                Lexend: 'Lexend',            
+              },
+                         
+            }
+          }
+        }
+      </script>
+</head>
+<body class="font-Lexend">
+    <!--Header Start-->    
+    <header class="w-full h-[100px] sticky top-0 z-50 py-5 bg-[#F9F7F3]">
+        <div class="md:w-10/12 px-2 mx-auto">
+            <nav class="flex justify-between gap-6 items-center">
+              <div>
+               <button id="btn-blog" class="bg-bgPrimary w-[70px] rounded-md md:w-[100px] h-[40px] text-textPrimary text-base md:text-xl font-semibold md:h-[50px]">Blog</button>
+              </div>
+              <div class="flex items-center gap-2">
+                <img class="w-[35px] h-auto md:w-[45px]" src="assets/logo.png" alt="Logo Icon">
+                <span class=" text-textPrimary text-base md:text-xl font-semibold">Donate Bangladesh</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <img class="w-[30px] h-[30px]" src="assets/coin.png" alt="Coin Icon">
+                <span class="text-textSecondary text-base md:text-xl font-semibold">54000 BDT</span>
+              </div>              
+            </nav>
+        </div>
+           <!--Button Start-->
+           <div class="flex items-center justify-center gap-4 mt-16">
+            <button class="w-[150px] h-[60px] rounded-md text-textPrimary text-xl font-semibold bg-bgPrimary">Donation</button>
+            <button class="w-[150px] h-[60px] border rounded-md text-textSecondary text-xl font-semibold border-gray-200">History</button>
+        </div>
+        <!--Button End-->
+    </header>
+    <!--Header End--> 
+      
+  
+  
+    
+    
+    
+</body>
+</html>
