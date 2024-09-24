@@ -51,17 +51,17 @@
             </nav>
         </div>
            <!--Button Start-->
-           <div class="flex items-center justify-center bg-transparent backdrop-blur-md gap-4 pt-8">
-            <button class="w-[150px] h-[60px] rounded-md text-textPrimary text-xl font-semibold bg-bgPrimary">Donation</button>
-            <button class="w-[150px] h-[60px] border rounded-md text-textSecondary text-xl font-semibold border-gray-200">History</button>
+           <div  class="flex items-center justify-center bg-transparent backdrop-blur-md gap-4 pt-8">
+            <button id="btn-donation" class="w-[150px] h-[60px] rounded-md text-textPrimary text-xl font-semibold bg-bgPrimary">Donation</button>
+            <button id="btn-history" class="w-[150px] h-[60px] border rounded-md text-textSecondary text-xl font-semibold border-gray-200">History</button>
         </div>
         <!--Button End-->
     </header>
     <!--Header End--> 
     <!--Main Start-->
     <main class="w-10/12 mx-auto">     
-        <!--Card Start-->        
-         <section class="w-12/12 mx-auto mt-32">
+        <!-- Start-->        
+         <section id="donation-section" class="w-12/12 mx-auto mt-32">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10 border border-slate-200 rounded-lg ">
             <div class="md:w-[520px] md:h-[390px] w-[300px] h-auto">
                 <img class="w-full p-3" src="assets/noakhali.png" alt="Noakhali Image">
@@ -113,12 +113,20 @@
                 </div>
             </div>
         </div>     
-     </section>        
+     </section>     
+    <!-- history section Start-->
+    <section  id="history-section" class="mt-10 w-10/12 mx-auto hidden">
+     <div id="history-div">
+        <h1>Hellow</h1>
+                
+        </div>
+ </section>
+     
         <!--Card End-->
     </main> 
     <!--Main End-->
     <!--Footer Start-->
-    <footer class="w-full bg-[#F9F7F3] h-[100px]">
+    <footer class="w-full mx-auto bg-[#F9F7F3] h-[100px]">
         <p class="text-textPrimary text-base md:text-xl text-center p-5 md:p-10">@2024 Donation Bangladesh | All Rights Reserved</p>
 
     </footer>

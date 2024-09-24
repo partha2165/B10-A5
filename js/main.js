@@ -17,7 +17,7 @@ document.getElementById('btn-donate').addEventListener('click', function(event){
         const mainBalanceNumber = parseFloat(mainBalanceValue);
         const newMainBalance = mainBalanceNumber - donateMoneyNoakhali;
         document.getElementById('main-balance').innerText = newMainBalance; 
-        console.log('Donate Successfully');        
+             
     }
     else{
       alert('Invalid Input');
@@ -67,3 +67,19 @@ document.getElementById('quota-protest-btn').addEventListener('click', function(
   }
   
 })
+
+//Show Button
+document.getElementById("btn-donation").addEventListener('click', function(){
+  document.getElementById('donation-section').classList.add('hidden');
+  document.getElementById('history-section').classList.remove('hidden');
+ 
+  document.getElementById('history-section').classList.add('bg-bgPrimary');
+
+})
+
+document.getElementById('btn-history').addEventListener('click', function(){
+  document.getElementById('history-section').classList.add('hidden');
+  document.getElementById('donation-section').classList.remove('hidden');
+})
+
+
