@@ -68,7 +68,20 @@ document.getElementById('quota-protest-btn').addEventListener('click', function(
   
 })
 
-document.getElementById('btn-history')
-.addEventListener('click', function(){
-  console.log('click');
+const historyBtn = document.getElementById('btn-history');
+const donationBtn = document.getElementById('btn-donation');
+historyBtn.addEventListener('click', function(){
+  document.getElementById('history-section').classList.remove('hidden');
+  document.getElementById('donation-section').classList.add('hidden');
+  document.getElementById('btn-history').classList.add('text-textPrimary','bg-bgPrimary');
+  document.getElementById('btn-donation').classList.remove('text-textPrimary','bg-bgPrimary');
 })
+donationBtn.addEventListener('click', function(){
+  document.getElementById('donation-section').classList.remove('hidden');
+  document.getElementById('history-section').classList.add('hidden');
+  document.getElementById('btn-donation').classList.add('border','rounded-md','text-textSecondary','border-gray-200');
+  document.getElementById('btn-history').classList.remove('text-textPrimary','bg-bgPrimary');
+  document.getElementById('btn-donation').classList.add('text-textPrimary','bg-bgPrimary');
+  
+})
+
