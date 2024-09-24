@@ -8,7 +8,7 @@ document.getElementById('btn-blog')
 document.getElementById('btn-donate').addEventListener('click', function(event){
   event.preventDefault();
     const donateMoneyNoakhali = getInputValueById('donate-input-value');
-        if( donateMoneyNoakhali >= 0){        
+        if( donateMoneyNoakhali > 0 && donateMoneyNoakhali < 0){        
         const donateMoneyBalance = document.getElementById('donate-money-balance').innerText;
         const donateMoneyBalanceNumber = parseFloat(donateMoneyBalance);
         const donateNewBalance = donateMoneyNoakhali + donateMoneyBalanceNumber;
@@ -34,7 +34,7 @@ document.getElementById('feni-btn-value').addEventListener('click', function(){
   
   
   
-  if( donateMoneyFeni >= 0){
+  if( donateMoneyFeni > 0){
     
     const feniMainBalance = document.getElementById('main-balance').innerText;
     const feniMainBalanceNumber = parseFloat(feniMainBalance);
@@ -55,7 +55,7 @@ document.getElementById('quota-protest-btn').addEventListener('click', function(
   const quotaMainBalanceNumber = parseFloat(quotaMainBalanceValue);
   const quotaNewBalance = quotaInputNumber + quotaMainBalanceNumber;
   document.getElementById('quota-main-balance').innerText = quotaNewBalance;
-  if( quotaInputValue >= 0){    
+  if( quotaInputValue > 0){    
     const quotaMainBalance = document.getElementById('main-balance').innerText;
     const quotaNewBalanceNumber = parseFloat(quotaMainBalance);
     const quotaRemainingBalance = quotaNewBalanceNumber - quotaNewBalance;
@@ -84,4 +84,5 @@ donationBtn.addEventListener('click', function(){
   document.getElementById('btn-donation').classList.add('text-textPrimary','bg-bgPrimary');
   
 })
+
 
