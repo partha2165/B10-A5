@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8" data-theme="light">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate Bangladesh</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Donate Bangladesh</title>    
     <!--Google Font Link-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,9 +59,9 @@
     <!--Header End--> 
     <!--Main Start-->
     <main class="w-10/12 mx-auto">     
-        <!-- Start-->        
+        <!--Card 1 Start-->        
          <section id="donation-section" class="w-12/12 mx-auto mt-32">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10 border border-slate-200 rounded-lg ">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-10 border border-slate-200 rounded-lg ">
             <div class="md:w-[520px] md:h-[390px] w-[300px] h-auto">
                 <img class="w-full p-3" src="assets/noakhali.png" alt="Noakhali Image">
             </div>
@@ -78,12 +77,14 @@
                     <button id="btn-donate" class="bg-bgPrimary w-[250px] md:w-[480px] h-[60px] text-textPrimary text-xl font-semibold rounded-md">Donate Now</button>
                 </div>
             </div>
-        </div>   
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10 border border-slate-200 my-6 rounded-lg ">
+        </div> 
+        <!--Card 1 End-->  
+        <!--Card 2 Start-->  
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-10 border border-slate-200 my-6 rounded-lg ">
             <div class="md:w-[520px] md:h-[390px] w-[300px] h-auto">
                 <img class="w-full p-3" src="assets/feni.png" alt="Feni Image">
             </div>
-            <div class="md:w-[520px] md:h-[450px] w-full p-3 h-auto">
+            <div class="lg:w-[520px] lg:h-[450px] w-full p-3 h-auto">
                 <div class="flex items-center bg-[#F3F3F3] w-[150px] gap-2 p-5 h-[50px] rounded-md">
                     <img class="" src="assets/coin.png" alt="Coin Icon">
                     <span id="btn-donate-feni" class="font-normal text-base text-textSecondary">600 BDT</span>
@@ -96,11 +97,13 @@
                 </div>
             </div>
         </div> 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10 border border-slate-200 mb-5 rounded-lg ">
-            <div class="md:w-[520px] md:h-[390px] w-[300px] h-auto">
+        <!--Card 2 End-->
+        <!--Card 3 Start-->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-10 border border-slate-200 mb-5 rounded-lg ">
+            <div class="md:w-[520px] md:h-[350px] lg:h-[390px] w-[300px] h-auto">
                 <img class="w-full p-3" src="assets/quota-protest.png" alt="Quota Protest Image">
             </div>
-            <div class="md:w-[520px] md:h-[480px] w-full p-3 h-auto">
+            <div class="lg:w-[520px] lg:h-[480px] w-full p-3 h-auto">
                 <div class="flex items-center bg-[#F3F3F3] w-[150px] gap-2 p-5 h-[50px] rounded-md">
                     <img class="" src="assets/coin.png" alt="Coin Icon">
                     <span id="quota-main-balance" class="font-normal text-base text-textSecondary">2400 BDT</span>
@@ -112,7 +115,9 @@
                     <button id="quota-protest-btn" class="bg-bgPrimary w-[250px] md:w-[480px] h-[60px] text-textPrimary text-xl font-semibold rounded-md">Donate Now</button>
                 </div>
             </div>
-        </div>     
+        </div>   
+        <!--Card 3 End-->  
+        
      </section>     
     <!-- history section Start-->
     <section  id="history-section" class="mt-10 w-10/12 mx-auto hidden">
@@ -125,6 +130,21 @@
         <!--Card End-->
     </main> 
     <!--Main End-->
+      <!-- Modal Start-->
+      <dialog id="my_modal" class="modal">
+        <div class="modal-box flex gap-2 flex-col items-center text-center">
+            <h3 class="text-3xl font-bold text-black">Congrates!</h3>
+            <img src="assets/coin.png" alt="" class="w-10 h-10">
+            <p class="py-4">You have donated for humankind</p>
+            <h3 class="text-xl text-black font-bold">Successfully</h3>
+            <div class="modal-action justify-center">
+            <form method="dialog">
+                <button class="btn">Close Confirmation</button>
+            </form>
+            </div>
+        </div>
+        </dialog>
+        <!--Modal End-->
     <!--Footer Start-->
     <footer class="w-full mx-auto bg-[#F9F7F3] h-[100px]">
         <p class="text-textPrimary text-base md:text-xl text-center p-5 md:p-10">@2024 Donation Bangladesh | All Rights Reserved</p>
