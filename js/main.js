@@ -7,34 +7,37 @@ document.getElementById('btn-blog')
 
 document.getElementById('btn-donate').addEventListener('click', function(event){
   event.preventDefault();
-    const donateMoneyNoakhali = getInputValueById('donate-input-value');
-        if( donateMoneyNoakhali <= 0){        
-        const donateMoneyBalance = document.getElementById('donate-money-balance').innerText;
-        const donateMoneyBalanceNumber = parseFloat(donateMoneyBalance);
-        const donateNewBalance = donateMoneyNoakhali + donateMoneyBalanceNumber;
-        document.getElementById('donate-money-balance').innerText = donateNewBalance;
-        const mainBalanceValue = document.getElementById('main-balance').innerText;
-        const mainBalanceNumber = parseFloat(mainBalanceValue);
-        const newMainBalance = mainBalanceNumber - donateMoneyNoakhali;
-        document.getElementById('main-balance').innerText = newMainBalance; 
-        alert('Invalid Input. Please try again');
-        return;        
-             
-    }
+    const donateMoneyNoakhali = getInputValueById('donate-input-value');   
+   const donateMoneyBalance = document.getElementById('donate-money-balance').innerText;
+   const donateMoneyBalanceNumber = parseFloat(donateMoneyBalance);   
+   const noakhaliMain = donateMoneyBalanceNumber + donateMoneyNoakhali;
+   document.getElementById('donate-money-balance').innerText = noakhaliMain;
+   const mainBalance = document.getElementById('main-balance').innerText;
+   const mainBalanceNumber = parseFloat(mainBalance);
+   const newMainBalance = mainBalanceNumber - noakhaliMain;
+   document.getElementById('main-balance').innerText = newMainBalance;
+   if( donateMoneyNoakhali  <= 0){   
     
+    alert('Invalid Input. Please try again');
+    return; 
     
-    const historyContainer = document.getElementById('history-section');
-    const newHistory = document.createElement('div');
-   newHistory.innerHTML = `
-    <div class="border p-4 sm:p-6 md:p-8 rounded-2xl mb-5">
-    <h3 class="text-2xl font-bold">${donateMoneyNoakhali} Taka is Donated for Flood at Noakhali, Bangladesh.</h3>
-    <p>Date: ${new Date()}</p>
-    </div>
-   `
-   historyContainer.append(newHistory);
+  }
+  const historyContainer = document.getElementById('history-section');
+  const newHistory = document.createElement('div');
+  newHistory.innerHTML = `
+  <div class="border p-4 sm:p-6 md:p-8 rounded-2xl mb-5">
+  <h3 class="text-2xl font-bold">${donateMoneyNoakhali} Donate for Flood at Noakhali, Bangladesh.</h3>
+  <p>Date: ${new Date()}</p>
+  </div>
+ `
+ historyContainer.append(newHistory);
 
-   my_modal.showModal();
-})
+ my_modal.showModal();
+
+});
+    
+  
+
 
 //Donate Feni
 document.getElementById('feni-btn-value').addEventListener('click', function(){
