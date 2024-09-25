@@ -8,7 +8,7 @@ document.getElementById('btn-blog')
 document.getElementById('btn-donate').addEventListener('click', function(event){
   event.preventDefault();
     const donateMoneyNoakhali = getInputValueById('donate-input-value');
-        if( donateMoneyNoakhali > 0 && donateMoneyNoakhali < 0){        
+        if( donateMoneyNoakhali > 0 ){        
         const donateMoneyBalance = document.getElementById('donate-money-balance').innerText;
         const donateMoneyBalanceNumber = parseFloat(donateMoneyBalance);
         const donateNewBalance = donateMoneyNoakhali + donateMoneyBalanceNumber;
@@ -19,9 +19,17 @@ document.getElementById('btn-donate').addEventListener('click', function(event){
         document.getElementById('main-balance').innerText = newMainBalance; 
              
     }
-    else{
-      alert('Invalid Input');
-    }
+    const historyContainer = document.getElementById('history-section');
+   const newHistory = document.createElement('div');
+   newHistory.innerHTML = `
+    <div class="border p-4 sm:p-6 md:p-8 rounded-2xl mb-5">
+    <h3 class="text-2xl font-bold">${donateMoneyNoakhali} Taka is Donated for Flood at Noakhali, Bangladesh</h3>
+    <p>Date: ${new Date()}</p>
+    </div>
+   `
+   historyContainer.append(newHistory);
+
+   my_modal.showModal();
 })
 
 //Donate Feni
@@ -43,7 +51,7 @@ document.getElementById('feni-btn-value').addEventListener('click', function(){
     
   }
   else{
-    alert('Invalid Input');
+    console.log('succ')
   }
 
 });
