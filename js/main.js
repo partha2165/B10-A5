@@ -8,7 +8,7 @@ document.getElementById('btn-blog')
 document.getElementById('btn-donate').addEventListener('click', function(event){
   event.preventDefault();
     const donateMoneyNoakhali = getInputValueById('donate-input-value');
-        if( donateMoneyNoakhali > 0 ){        
+        if( donateMoneyNoakhali <= 0){        
         const donateMoneyBalance = document.getElementById('donate-money-balance').innerText;
         const donateMoneyBalanceNumber = parseFloat(donateMoneyBalance);
         const donateNewBalance = donateMoneyNoakhali + donateMoneyBalanceNumber;
@@ -17,8 +17,12 @@ document.getElementById('btn-donate').addEventListener('click', function(event){
         const mainBalanceNumber = parseFloat(mainBalanceValue);
         const newMainBalance = mainBalanceNumber - donateMoneyNoakhali;
         document.getElementById('main-balance').innerText = newMainBalance; 
+        alert('Invalid Input. Please try again');
+        return;        
              
     }
+    
+    
     const historyContainer = document.getElementById('history-section');
     const newHistory = document.createElement('div');
    newHistory.innerHTML = `
@@ -42,12 +46,14 @@ document.getElementById('feni-btn-value').addEventListener('click', function(){
   
   
   
-  if( donateMoneyFeni > 0){
+  if( donateMoneyFeni <= 0){
     
     const feniMainBalance = document.getElementById('main-balance').innerText;
     const feniMainBalanceNumber = parseFloat(feniMainBalance);
     const feniRemainingBalance = feniMainBalanceNumber - feninewBalance;
     document.getElementById('main-balance').innerText = feniRemainingBalance;
+    alert('Invalid Input. Please try again');
+    return; 
     
   }
   const historyContainer = document.getElementById('history-section');
@@ -71,11 +77,13 @@ document.getElementById('quota-protest-btn').addEventListener('click', function(
   const quotaMainBalanceNumber = parseFloat(quotaMainBalanceValue);
   const quotaNewBalance = quotaInputNumber + quotaMainBalanceNumber;
   document.getElementById('quota-main-balance').innerText = quotaNewBalance;
-  if( quotaInputValue > 0){    
+  if( quotaInputValue <= 0){    
     const quotaMainBalance = document.getElementById('main-balance').innerText;
     const quotaNewBalanceNumber = parseFloat(quotaMainBalance);
     const quotaRemainingBalance = quotaNewBalanceNumber - quotaNewBalance;
     document.getElementById('main-balance').innerText = quotaRemainingBalance;
+    alert('Invalid Input. Please try again');
+    return; 
     
   }
   const historyContainer = document.getElementById('history-section');
