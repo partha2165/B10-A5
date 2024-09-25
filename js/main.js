@@ -20,10 +20,10 @@ document.getElementById('btn-donate').addEventListener('click', function(event){
              
     }
     const historyContainer = document.getElementById('history-section');
-   const newHistory = document.createElement('div');
+    const newHistory = document.createElement('div');
    newHistory.innerHTML = `
     <div class="border p-4 sm:p-6 md:p-8 rounded-2xl mb-5">
-    <h3 class="text-2xl font-bold">${donateMoneyNoakhali} Taka is Donated for Flood at Noakhali, Bangladesh</h3>
+    <h3 class="text-2xl font-bold">${donateMoneyNoakhali} Taka is Donated for Flood at Noakhali, Bangladesh.</h3>
     <p>Date: ${new Date()}</p>
     </div>
    `
@@ -50,9 +50,17 @@ document.getElementById('feni-btn-value').addEventListener('click', function(){
     document.getElementById('main-balance').innerText = feniRemainingBalance;
     
   }
-  else{
-    console.log('succ')
-  }
+  const historyContainer = document.getElementById('history-section');
+  const newHistory = document.createElement('div');
+  newHistory.innerHTML = `
+  <div class="border p-4 sm:p-6 md:p-8 rounded-2xl mb-5">
+  <h3 class="text-2xl font-bold">${donateMoneyFeni} Donate for Flood Relief in Feni, Bangladesh.</h3>
+  <p>Date: ${new Date()}</p>
+  </div>
+ `
+ historyContainer.append(newHistory);
+
+ my_modal.showModal();
 
 });
 //Donate Quota Protest
@@ -70,17 +78,27 @@ document.getElementById('quota-protest-btn').addEventListener('click', function(
     document.getElementById('main-balance').innerText = quotaRemainingBalance;
     
   }
-  else{
-    alert('Invalid Input');
-  }
+  const historyContainer = document.getElementById('history-section');
+  const newHistory = document.createElement('div');
+  newHistory.innerHTML = `
+  <div class="border p-4 sm:p-6 md:p-8 rounded-2xl mb-5">
+  <h3 class="text-2xl font-bold">${quotaInputValue} Aid for Injured in the Quota Movement.</h3>
+  <p>Date: ${new Date()}</p>
+  </div>
+ `
+ historyContainer.append(newHistory);
+
+ my_modal.showModal();
   
 })
 
 const historyBtn = document.getElementById('btn-history');
 const donationBtn = document.getElementById('btn-donation');
+const foterSection = document.getElementById('foter-section');
 historyBtn.addEventListener('click', function(){
   document.getElementById('history-section').classList.remove('hidden');
   document.getElementById('donation-section').classList.add('hidden');
+  document.getElementById('foter-section').classList.add('hidden');
   document.getElementById('btn-history').classList.add('text-textPrimary','bg-bgPrimary');
   document.getElementById('btn-donation').classList.remove('text-textPrimary','bg-bgPrimary');
 })
